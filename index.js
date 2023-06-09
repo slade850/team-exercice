@@ -16,6 +16,10 @@ io.on("connection", (socket) => {
     console.log("message: " + msg);
     io.emit("chat message", msg);
   });
+  socket.on("stream", (stream) => {
+    console.log("stream send");
+    io.emit("stream", stream);
+  });
   socket.on("disconnect", () => {
     console.log("user disconnected");
   });

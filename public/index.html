@@ -9,6 +9,9 @@
   <script src="/js/index.js" defer></script>
   <body>
     <div id="app"></div>
-    <input type="text" onchange="(e) => testInput(e)" />
+    <form>
+      <input type="text" onkeypress="testInput(event)" id="input_text" />
+      <input type="button" onclick="console.log('HEHE')" name="send" />
+    </form>
   </body>
 </html>
